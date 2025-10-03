@@ -1,69 +1,50 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🎯 Key Components
 
-Currently, two official plugins are available:
+### AgendaSystem
+- Visitor registration form
+- Time-based status automation
+- Two-day filtered view
+- Click-to-remove functionality
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### RoomSchedule  
+- Visual timeline interface
+- Conflict prevention
+- Participant management
+- PDF report generation
 
-## Expanding the ESLint configuration
+### Video Component
+- YouTube URL processing
+- Responsive iframe embedding
+- Modal-based URL input
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 💡 Smart Features
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **Time Validation**: Prevents scheduling conflicts and invalid time ranges
+- **Auto-formatting**: Converts YouTube URLs to embedded format
+- **Responsive Design**: Works on tablets, desktops, and touch screens
+- **Error Handling**: User-friendly alerts for invalid inputs
+- **Data Persistence**: Integrated with backend API
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## 🚀 Getting Started
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1. Clone the repository
+2. Install dependencies: `npm install`
+3. Start backend server: `node server.js`
+4. Start frontend: `npm start`
+5. Access at: `http://localhost:3000`
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🔧 API Endpoints
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- `GET/POST /api/visitors` - Visitor management
+- `GET/POST/DELETE /api/meeting-rooms` - Meeting operations  
+- `POST /api/meetings/:id/participants` - Participant handling
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 📸 Use Cases
+
+- **Reception Areas**: Track incoming visitors
+- **Office Management**: Schedule meeting rooms efficiently
+- **Internal Communications**: Display company video updates
+- **Administrative Tools**: Generate meeting reports and participant lists
+
+Perfect for companies needing an integrated solution for visitor management, room scheduling, and internal communications in a single, user-friendly interface.
