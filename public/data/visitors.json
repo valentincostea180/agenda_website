@@ -1,0 +1,20 @@
+[
+  {
+    "id": "1757575218287",
+    "name": "Banuta B.",
+    "company": "Construct SA",
+    "time": "2025-09-12T11:20",
+    "purpose": "Salmon Eating",
+    "arrivalTime": "10:20:18 AM",
+    "status": "scheduled"
+  },
+  {
+    "id": "1757577242048",
+    "name": "A. Dragoi",
+    "company": "Hamak",
+    "time": "2025-09-11T12:00",
+    "purpose": "RCA",
+    "arrivalTime": "10:54:02 AM",
+    "status": "scheduled"
+  }
+]
