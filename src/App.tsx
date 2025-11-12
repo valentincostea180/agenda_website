@@ -12,7 +12,7 @@ function App() {
   const [showUrlModal, setShowUrlModal] = useState(false);
   const [tempUrl, setTempUrl] = useState("");
 
-  const path = "10.142.43.34";
+  const path = "localhost";
 
   // Function to convert YouTube URL to embedded format
   const convertToEmbedUrl = (url) => {
