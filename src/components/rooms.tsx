@@ -72,14 +72,6 @@ function RoomSchedule(props) {
     }
   }, [selectedMeeting, showMeetingModal]);
 
-  const getMeetingsCountForSelectedDate = (meetings: Meeting[]) => {
-    const sameDayMeetings = meetings.filter((meeting) => {
-      const meetingDate = new Date(meeting.startTime);
-      return meetingDate.toDateString() === selectedDate.toDateString();
-    });
-    return sameDayMeetings.length;
-  };
-
   const validateMeetingTimes = (meeting: {
     startTime: string;
     endTime: string;
@@ -497,8 +489,8 @@ function RoomSchedule(props) {
               className="table-responsive"
               style={{
                 overflow: "auto",
-                maxWidth: "100%",
-                maxHeight: "50vh",
+                minWidth: "100%",
+                maxHeight: "100%",
                 WebkitOverflowScrolling: "touch",
                 borderRadius: "4px",
               }}
@@ -804,8 +796,8 @@ function RoomSchedule(props) {
                 <button
                   className="modal-btn modal-btn-submit mb-3"
                   onClick={addParticipant}
+                  style={{ width: "100%" }}
                 >
-                  <i className="fas fa-plus me-2"></i>
                   Add Participant
                 </button>
 

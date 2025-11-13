@@ -6,7 +6,11 @@
   --card-border: rgba(167, 145, 179, 0.3);
 }
 
+html,
 body {
+  zoom: 90%;
+  height: 100%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -32,8 +36,6 @@ body {
 }
 
 .agenda-system {
-  height: 100%;
-  min-width: 100vh;
   margin: 0 auto;
   padding: 1rem;
 }
@@ -581,7 +583,7 @@ iframe {
 .modal-footer {
   display: flex;
   gap: 1rem;
-  padding: 1rem 2rem 2rem;
+  padding: 0 2rem 2rem;
   justify-content: flex-end;
 }
 
@@ -645,7 +647,7 @@ iframe {
   background: rgba(255, 255, 255, 0.05);
   border-radius: 1rem;
   padding: 1.5rem;
-  margin-bottom: 1.5rem;
+
   border: 1px solid var(--card-border);
 }
 

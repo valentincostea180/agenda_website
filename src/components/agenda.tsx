@@ -138,7 +138,10 @@ function AgendaSystem(props) {
       .sort((a, b) => new Date(a.time).getTime() - new Date(b.time).getTime());
 
     return (
-      <table className="table tb table-striped table-bordered">
+      <table
+        className="table tb table-striped table-bordered"
+        style={{ width: "100%" }}
+      >
         <thead>
           <tr>
             <th>Visitor</th>

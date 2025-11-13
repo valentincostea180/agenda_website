@@ -2,7 +2,14 @@
   {
     "id": "1",
     "name": "Chipicao Session Room",
-    "meetings": []
+    "meetings": [
+      {
+        "id": "m-1763036839370",
+        "title": "asv",
+        "startTime": "2025-11-13T14:27",
+        "endTime": "2025-11-13T14:28"
+      }
+    ]
   },
   {
     "id": "2",

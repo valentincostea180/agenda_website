@@ -93,9 +93,6 @@ function App() {
           <div className="url-modal">
             <div className="modal-header">
               <h3>Enter YouTube Video URL</h3>
-              <button className="modal-close" onClick={handleModalClose}>
-                &times;
-              </button>
             </div>
             <div className="modal-body">
               <p>Please paste a YouTube video link to display</p>
