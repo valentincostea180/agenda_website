@@ -181,7 +181,7 @@ function AgendaSystem(props) {
   };
   return (
     <div className="mt-4">
-      <h2>Visitors Today</h2>
+      <h2 style={{marginBottom: "2rem"}}>Visitors Today</h2>
 
       {showForm && (
         <div className="mt-4">
