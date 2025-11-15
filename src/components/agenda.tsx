@@ -33,7 +33,7 @@ function AgendaSystem(props) {
 
   const handleEliminate = async (visitorId: string) => {
     const confirmDelete = window.confirm(
-      "Sigur vrei să elimini acest vizitator?"
+      "Are you sure you want to delete this visitor?"
     );
     if (!confirmDelete) return;
 
