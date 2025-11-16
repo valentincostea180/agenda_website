@@ -41,7 +41,7 @@ function App() {
   };
 
   const handleUrlSubmit = () => {
-    if (tempUrl) {
+
       const embedUrl = convertToEmbedUrl(tempUrl);
       if (embedUrl) {
         setVideoUrl(embedUrl);
@@ -53,7 +53,7 @@ function App() {
       } else {
         alert("Please enter a valid YouTube URL");
       }
-    }
+    
   };
 
   const handleModalClose = () => {
