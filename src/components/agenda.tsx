@@ -181,14 +181,14 @@ function AgendaSystem(props) {
   };
   return (
     <div className="mt-4">
-      <h2 style={{marginBottom: "2rem"}}>Visitors Today</h2>
+      <h2 style={{marginBottom: "2rem", }}>Visitors Today</h2>
 
       {showForm && (
         <div className="mt-4">
-          <h4>Add New Visitor</h4>
-          <div className="row g-2">
-            <div className="col-md">
-              <div className="form-floating">
+          <h4 style={{textAlign : "center"}}>Add New Visitor</h4>
+          <div className="row g-2" >
+            <div className="col-md" style={{textAlign : "center"}}>
+              <div className="form-floating" >
                 <input
                   type="text"
                   placeholder="Name"
@@ -201,7 +201,7 @@ function AgendaSystem(props) {
               </div>
             </div>
 
-            <div className="col-md">
+            <div className="col-md" style={{textAlign : "center"}}>
               <div className="form-floating">
                 <input
                   type="text"
@@ -215,7 +215,7 @@ function AgendaSystem(props) {
               </div>
             </div>
 
-            <div className="col-md">
+            <div className="col-md" style={{textAlign : "center"}}>
               <div className="form-floating">
                 <input
                   type="datetime-local"
@@ -229,7 +229,7 @@ function AgendaSystem(props) {
               </div>
             </div>
 
-            <div className="col-md">
+            <div className="col-md" style={{textAlign : "center"}}>
               <div className="form-floating">
                 <input
                   type="text"
