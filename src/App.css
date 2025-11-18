@@ -4,6 +4,7 @@
   --light-accent: #a791b3;
   --card-bg: rgba(255, 255, 255, 0.1);
   --card-border: rgba(167, 145, 179, 0.3);
+  --warm-white: #d9c5e6;
 }
 
 html,
@@ -55,13 +56,13 @@ body {
   font-weight: 700;
   margin-bottom: 0.5rem;
   font-size: 2.5rem;
-  background: linear-gradient(to right, #fff, #d9c5e6);
+  background: linear-gradient(to right, #fff, var(--warm-white));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .agenda-header p {
-  color: #d9c5e6;
+  color: var(--warm-white);
   font-size: 1.1rem;
   max-width: 600px;
   margin: 0 auto;
@@ -107,7 +108,7 @@ body {
 }
 
 .panel-title i {
-  color: #d9c5e6;
+  color: var(--warm-white);
 }
 
 .form-floating {
@@ -135,7 +136,7 @@ textarea {
 .form-select:focus,
 textarea:focus {
   background: rgba(255, 255, 255, 0.18) !important;
-  border-color: #d9c5e6;
+  border-color: var(--warm-white);
   box-shadow: 0 0 0 0.25rem rgba(167, 145, 179, 0.25);
 }
 
@@ -377,7 +378,7 @@ label {
   position: relative;
   min-width: 50rem;
   height: 0;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio (9/16 = 0.5625) */
+  padding-bottom: 56.25%;
   overflow: hidden;
 }
 
@@ -507,7 +508,7 @@ iframe {
 
 .modal-header h3 {
   margin: 0;
-  background: linear-gradient(to right, #fff, #d9c5e6);
+  background: linear-gradient(to right, #fff, var(--warm-white));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 1.5rem;
@@ -538,7 +539,7 @@ iframe {
 }
 
 .modal-body p {
-  color: #d9c5e6;
+  color: var(--warm-white);
   margin-bottom: 1.5rem;
   text-align: center;
   font-size: 1.1rem;
@@ -558,7 +559,7 @@ iframe {
 
 .url-input:focus {
   background: rgba(255, 255, 255, 0.18) !important;
-  border-color: #d9c5e6;
+  border-color: var(--warm-white);
   box-shadow: 0 0 0 0.25rem rgba(167, 145, 179, 0.25);
   outline: none;
 }
@@ -655,13 +656,13 @@ iframe {
   text-align: center;
   color: #fff;
   margin-bottom: 1rem;
-  background: linear-gradient(to right, #fff, #d9c5e6);
+  background: linear-gradient(to right, #fff, var(--warm-white));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .meeting-info p {
-  color: #d9c5e6;
+  color: var(--warm-white);
   margin-bottom: 0.5rem;
 }
 
