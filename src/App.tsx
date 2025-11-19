@@ -14,7 +14,7 @@ function App() {
 
   const path = "localhost";
 
-  // Function to convert YouTube URL to embedded format
+  //functie modificare url
   const convertToEmbedUrl = (url) => {
     const regex =
       /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
@@ -29,10 +29,9 @@ function App() {
 
   const handleVideoToggle = () => {
     if (!showVideo) {
-      // Show the modal instead of prompt
       setShowUrlModal(true);
     } else {
-      // If we're switching back to agenda
+      // pentru schimbare la ecranul anterior
       setShowVisitors(true);
       setShowMeetings(true);
       setShowVideo(false);
