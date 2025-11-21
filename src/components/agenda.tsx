@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-// Interfaces
+// interfate
 interface Visitor {
   id: string;
   name: string;
@@ -12,7 +12,7 @@ interface Visitor {
   status: "scheduled" | "finished";
 }
 
-// Component
+// componente
 function AgendaSystem(props) {
   const [visitors, setVisitors] = useState<Visitor[]>([]);
   const [newVisitor, setNewVisitor] = useState({
@@ -23,7 +23,7 @@ function AgendaSystem(props) {
   });
   const [showForm, setShowForm] = useState(false);
 
-  // Load data
+  // fetch
   useEffect(() => {
     fetch(`http://${props.host}:5000/api/visitors`)
       .then((response) => response.json())
@@ -58,7 +58,7 @@ function AgendaSystem(props) {
   const formatVisitorTime = (timeString: string) => {
     const visitDate = new Date(timeString);
 
-    // Normalize dates to ignore time for comparison
+    // normalizare date
     const today = new Date();
     today.setHours(0, 0, 0, 0);
 
@@ -85,13 +85,12 @@ function AgendaSystem(props) {
     }
   };
 
-  // Add visitor
-  // Add visitor
+  // adaugare vizitator
   const handleAddVisitor = () => {
     const now = new Date();
     const visitTime = new Date(newVisitor.time);
 
-    // Determine status based on time comparison
+    // modificare status
     const status = visitTime < now ? "finished" : "scheduled";
 
     const visitor: Visitor = {
@@ -101,7 +100,7 @@ function AgendaSystem(props) {
       time: newVisitor.time,
       purpose: newVisitor.purpose,
       arrivalTime: new Date().toLocaleTimeString(),
-      status: status, // Set status based on time comparison
+      status: status,
     };
 
     setNewVisitor({ name: "", company: "", time: "", purpose: "" });
@@ -128,10 +127,10 @@ function AgendaSystem(props) {
         const visitDate = new Date(visitor.time);
 
         const start = new Date();
-        start.setHours(0, 0, 0, 0); // start of today
+        start.setHours(0, 0, 0, 0); // start zilei actuale
 
         const end = new Date(start);
-        end.setDate(start.getDate() + 2); // +2 days
+        end.setDate(start.getDate() + 2); // +2 zile
 
         return visitDate >= start && visitDate <= end;
       })
@@ -256,8 +255,7 @@ function AgendaSystem(props) {
         </div>
       )}
 
-      {/* Visitors List */}
-      {/* Visitors List */}
+      {/* lista vizitatorilor */}
       {!showForm && <div className="visitors-list">{renderVisitorTable()}</div>}
 
       <button
