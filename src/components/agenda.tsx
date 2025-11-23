@@ -180,11 +180,11 @@ function AgendaSystem(props) {
   };
   return (
     <div className="mt-4">
-      <h2 style={{marginBottom: "2rem", }}>Visitors Today</h2>
+      <h2>Visitors Today</h2>
 
       {showForm && (
         <div className="mt-4">
-          <h4 style={{textAlign : "center"}}>Add New Visitor</h4>
+          <h3 style={{textAlign : "center"}}>Add New Visitor</h3>
           <div className="row g-2" >
             <div className="col-md" style={{textAlign : "center"}}>
               <div className="form-floating" >
@@ -256,7 +256,7 @@ function AgendaSystem(props) {
       )}
 
       {/* lista vizitatorilor */}
-      {!showForm && <div className="visitors-list">{renderVisitorTable()}</div>}
+      {!showForm && <div style={{marginTop: "2rem", }} className="visitors-list">{renderVisitorTable()}</div>}
 
       <button
         className="btn-add btn-secondary"
