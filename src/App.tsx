@@ -14,7 +14,7 @@ function App() {
 
   const path = "localhost";
 
-  //functie modificare url
+  // functie modificare url
   const convertToEmbedUrl = (url) => {
     const regex =
       /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;

@@ -3,6 +3,7 @@
 /* ============================= */
 
 :root {
+  --background-purple: rgba(167, 145, 179, 0.2);
   --primary-purple: #502171;
   --dark-purple: #2a0e3f;
   --light-accent: #a791b3;
@@ -108,7 +109,7 @@ body {
 }
 
 /* ============================= */
-/* MEETINGS SCHEDULING  */
+/* MEETINGS SCHEDULING */
 /* ============================= */
 
 .meetings-panel {
@@ -144,7 +145,7 @@ body {
 }
 
 /* ============================= */
-/* FORMS  */
+/* FORMS */
 /* ============================= */
 
 .form-floating {
@@ -181,7 +182,7 @@ textarea:focus {
 }
 
 /* ============================= */
-/* BUTTONS  */
+/* BUTTONS */
 /* ============================= */
 
 .btn-primary {
@@ -334,7 +335,7 @@ textarea:focus {
 }
 
 .modal-btn-cancel {
-  background: rgba(167, 145, 179, 0.2);
+  background: var(--background-purple);
   color: var(--light-accent);
   border: 1px solid var(--card-border);
 }
@@ -375,7 +376,7 @@ textarea:focus {
 }
 
 /* ============================= */
-/* TABLE  */
+/* TABLE */
 /* ============================= */
 
 .table-container {
@@ -420,7 +421,7 @@ textarea:focus {
 }
 
 .table tr:hover {
-  background: rgba(167, 145, 179, 0.2);
+  background: var(--background-purple);
 }
 
 
@@ -445,7 +446,7 @@ textarea:focus {
 }
 
 /* ============================= */
-/* MEETING SLOT  */
+/* MEETING SLOT */
 /* ============================= */
 
 
@@ -490,7 +491,7 @@ textarea:focus {
 }
 
 /* ============================= */
-/* LABEL  */
+/* LABEL */
 /* ============================= */
 
 label {
@@ -608,7 +609,7 @@ iframe {
 }
 
 .modal-close:hover {
-  background: rgba(167, 145, 179, 0.2);
+  background: var(--background-purple);
   color: #fff;
 }
 
