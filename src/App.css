@@ -114,7 +114,8 @@ body {
 
 .meetings-panel {
   flex: 2;
-  min-width: 500px;
+  min-width: 1100px;
+  min-height: 475px;
   background: var(--card-bg);
   backdrop-filter: blur(10px);
   border-radius: 1.5rem;

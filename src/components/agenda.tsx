@@ -130,7 +130,7 @@ function AgendaSystem(props) {
         start.setHours(0, 0, 0, 0); // start zilei actuale
 
         const end = new Date(start);
-        end.setDate(start.getDate() + 2); // +2 zile
+        end.setDate(start.getDate() + 2); // + 2 zile
 
         return visitDate >= start && visitDate <= end;
       })
@@ -153,13 +153,12 @@ function AgendaSystem(props) {
           {filteredVisitors.length > 0 ? (
             filteredVisitors
               .slice(-4)
-
               .map((visitor) => (
                 <tr
                   key={visitor.id}
-                  style={{ cursor: "pointer" }} // show clickable cursor
+                  style={{ cursor: "pointer" }} 
                   onClick={() => handleEliminate(visitor.id)}
-                  title="Click to remove this visitor" // optional tooltip
+                  title="Click to remove this visitor" 
                 >
                   <td>{visitor.name}</td>
                   <td>{visitor.company}</td>
@@ -170,7 +169,7 @@ function AgendaSystem(props) {
           ) : (
             <tr>
               <td colSpan={4} style={{ textAlign: "center" }}>
-                No visitors scheduled in 2 days
+                No visitors scheduled in 2 days.
               </td>
             </tr>
           )}

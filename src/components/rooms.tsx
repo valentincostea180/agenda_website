@@ -456,7 +456,7 @@ function RoomSchedule(props) {
   };
 
   return (
-    <div className="container-fluid py-4">
+    <div className="container-fluid">
       <div className="row mb-4">
         <div className="col">
           <div className="d-flex justify-content-between align-items-center">
@@ -549,8 +549,6 @@ function RoomSchedule(props) {
                         </td>
 
                         {/* Time slot cells */}
-
-                        {/* Meeting blocks - positioned over the entire row */}
                         {todaysMeetings.map((meeting) => {
                           const style = getMeetingStyle(meeting);
                           return (
@@ -603,12 +601,12 @@ function RoomSchedule(props) {
           </div>
         </div>
       ) : (
-        // ... (the rest of your form code remains the same)
         <div className="row justify-content-center">
           <div className="mt-4">
-            <h4>Add Meeting for {currentRoom?.name}</h4>
+            <h3 style={{textAlign : "center"}}>Add Meeting for {currentRoom?.name}</h3>
             <div className="row g-2">
-              <div className="col-md">
+
+              <div className="col-md" style={{textAlign : "center"}}>
                 <div className="form-floating">
                   <input
                     type="text"
@@ -619,12 +617,14 @@ function RoomSchedule(props) {
                     }
                     className="form-control"
                   />
-                  <label>Meeting Title</label>
+                  
                 </div>
               </div>
 
-              <div className="col-md">
+              <div className="col-md" style={{textAlign : "center"}}>
+                <h5>Start Time</h5>
                 <div className="form-floating">
+                  
                   <input
                     type="datetime-local"
                     placeholder="Start Time"
@@ -637,12 +637,13 @@ function RoomSchedule(props) {
                     }
                     className="form-control"
                   />
-                  <label>Start Time</label>
+
                 </div>
               </div>
 
-              <div className="col-md">
+              <div className="col-md" style={{textAlign : "center"}}>
                 <div className="form-floating">
+                  <h5>End Time</h5>
                   <input
                     type="datetime-local"
                     placeholder="End Time"
@@ -652,7 +653,7 @@ function RoomSchedule(props) {
                     }
                     className="form-control"
                   />
-                  <label>End Time</label>
+
                 </div>
               </div>
             </div>
@@ -699,7 +700,6 @@ function RoomSchedule(props) {
         </div>
       )}
 
-      {/* Rest of your modals remain exactly the same */}
       {/* Meeting Action Modal */}
       {showMeetingModal && selectedMeeting && (
         <div className="modal-overlay">
