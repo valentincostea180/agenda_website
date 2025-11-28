@@ -610,7 +610,7 @@ function RoomSchedule(props) {
                 <div className="form-floating">
                   <input
                     type="text"
-                    placeholder="Title"
+                    placeholder="Meeting's Title"
                     value={newMeeting.title}
                     onChange={(e) =>
                       setNewMeeting({ ...newMeeting, title: e.target.value })
@@ -622,7 +622,7 @@ function RoomSchedule(props) {
               </div>
 
               <div className="col-md" style={{textAlign : "center"}}>
-                <h5>Start Time</h5>
+                <h5 style={{margin: "10px"}}>Start Time</h5>
                 <div className="form-floating">
                   
                   <input
@@ -643,7 +643,7 @@ function RoomSchedule(props) {
 
               <div className="col-md" style={{textAlign : "center"}}>
                 <div className="form-floating">
-                  <h5>End Time</h5>
+                  <h5 style={{margin: "10px"}}>End Time</h5>
                   <input
                     type="datetime-local"
                     placeholder="End Time"
