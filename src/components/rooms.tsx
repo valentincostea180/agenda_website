@@ -603,7 +603,7 @@ function RoomSchedule(props) {
       ) : (
         <div className="row justify-content-center">
           <div className="mt-4">
-            <h3 style={{textAlign : "center"}}>Add Meeting for {currentRoom?.name}</h3>
+            <h3 style={{marginBottom: "12px", textAlign : "center"}}>Add Meeting for {currentRoom?.name}</h3>
             <div className="row g-2">
 
               <div className="col-md" style={{textAlign : "center"}}>

@@ -586,12 +586,11 @@ iframe {
   align-items: center;
   padding: 1.5rem 2rem 1rem;
   border-bottom: 1px solid var(--card-border);
+  color: linear-gradient(to right, #fff, var(--warm-white));
 }
 
 .modal-header h3 {
   margin: 0;
-  background: linear-gradient(to right, #fff, var(--warm-white));
-  -webkit-text-fill-color: transparent;
   font-size: 1.5rem;
 }
 
