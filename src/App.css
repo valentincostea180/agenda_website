@@ -212,7 +212,6 @@ textarea:focus {
   transition: all 0.3s ease;
   width: 100%;
   margin-top: 1rem;
-  color: #ddd;
 }
 
 .btn-add:hover {

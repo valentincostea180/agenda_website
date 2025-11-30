@@ -671,7 +671,7 @@ function RoomSchedule(props) {
             )}
 
             <button
-              className="btn-add btn-primary mt-2"
+              className=" btn btn-add btn-primary mt-2"
               onClick={handleAddMeeting}
               disabled={
                 !newMeeting.title ||
