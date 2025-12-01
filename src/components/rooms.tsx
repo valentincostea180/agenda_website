@@ -616,13 +616,14 @@ function RoomSchedule(props) {
                       setNewMeeting({ ...newMeeting, title: e.target.value })
                     }
                     className="form-control"
+                    style={{marginTop: "0.2rem"}}
                   />
                   
                 </div>
               </div>
 
               <div className="col-md" style={{textAlign : "center"}}>
-                <h5 style={{margin: "10px"}}>Start Time</h5>
+                <h5 style={{marginBottom: "10px"}}>Start Time</h5>
                 <div className="form-floating">
                   
                   <input
@@ -642,8 +643,8 @@ function RoomSchedule(props) {
               </div>
 
               <div className="col-md" style={{textAlign : "center"}}>
-                <div className="form-floating">
-                  <h5 style={{margin: "10px"}}>End Time</h5>
+                <div className="form-floating" style={{marginBottom: "1rem"}}>
+                  <h5 style={{marginBottom: "10px"}}>End Time</h5>
                   <input
                     type="datetime-local"
                     placeholder="End Time"
