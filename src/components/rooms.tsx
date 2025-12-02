@@ -210,12 +210,12 @@ function RoomSchedule(props) {
     const duration = endMinutes - startMinutes;
 
     // Calculate position from 8:00 AM (480 minutes)
-    const positionFromStart = startMinutes - 480; // 8:00 AM = 480 minutes
+    const positionFromStart = startMinutes - 400; // 8:00 AM = 480 minutes
 
     // Calculate percentage position and width
     const totalMinutes = 600; // 8:00 AM to 6:00 PM = 10 hours = 600 minutes
-    const left = (positionFromStart / totalMinutes) * 100;
-    const width = (duration / totalMinutes) * 100;
+    const left = (positionFromStart / totalMinutes ) * 100;
+    const width = (duration / totalMinutes ) * 100;
 
     return {
       left: `${Math.max(0, left)}%`,
@@ -227,7 +227,7 @@ function RoomSchedule(props) {
     };
   };
 
-  // New function to get meetings for the selected date
+  // functie filtrare meetinguri dupa data
   const getMeetingsForSelectedDate = (room: MeetingRoom) => {
     return room.meetings.filter((meeting) => {
       const meetingDate = new Date(meeting.startTime);
@@ -242,14 +242,14 @@ function RoomSchedule(props) {
     setOverlapError(false);
   };
 
-  // New function to handle time slot click
+  // functie click pe time box
   const handleTimeSlotClick = (room: MeetingRoom, meeting: Meeting) => {
     setSelectedMeeting(meeting);
     setSelectedMeetingRoom(room);
     setShowMeetingModal(true);
   };
 
-  // New function to handle meeting deletion
+  // functie stergere meeting
   const handleDeleteMeeting = async () => {
     if (!selectedMeeting || !selectedMeetingRoom) return;
 
