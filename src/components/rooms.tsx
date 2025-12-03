@@ -210,7 +210,7 @@ function RoomSchedule(props) {
     const duration = endMinutes - startMinutes;
 
     // Calculate position from 8:00 AM (480 minutes)
-    const positionFromStart = startMinutes - 400; // 8:00 AM = 480 minutes
+    const positionFromStart = startMinutes - 480; // 8:00 AM = 480 minutes
 
     // Calculate percentage position and width
     const totalMinutes = 600; // 8:00 AM to 6:00 PM = 10 hours = 600 minutes
