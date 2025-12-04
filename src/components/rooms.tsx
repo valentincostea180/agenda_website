@@ -37,8 +37,6 @@ function RoomSchedule(props) {
   const [pickDate, setPickDate] = useState(false);
   const [showError, setShowError] = useState(false);
   const [overlapError, setOverlapError] = useState(false);
-
-  // New states for modals
   const [showMeetingModal, setShowMeetingModal] = useState(false);
   const [selectedMeeting, setSelectedMeeting] = useState<Meeting | null>(null);
   const [selectedMeetingRoom, setSelectedMeetingRoom] =
@@ -49,7 +47,7 @@ function RoomSchedule(props) {
   const [savedParticipants, setSavedParticipants] = useState<Participant[]>([]);
   const [isLoadingParticipants, setIsLoadingParticipants] = useState(false);
 
-  // Generate time slots from 8 AM to 6 PM in 30-minute intervals
+  // functie generare time sloturi
   useEffect(() => {
     const slots = [];
     for (let hour = 8; hour <= 18; hour++) {
@@ -65,7 +63,7 @@ function RoomSchedule(props) {
     fetchMeetingRooms();
   }, [selectedDate]);
 
-  // Load participants when meeting modal opens
+  // functie fetch participanti
   useEffect(() => {
     if (selectedMeeting && showMeetingModal) {
       loadParticipants();
@@ -198,21 +196,21 @@ function RoomSchedule(props) {
     });
   };
 
-  // New function to calculate meeting position and width
+  // functie pozitie si latime
   const getMeetingStyle = (meeting: Meeting) => {
     const meetingStart = new Date(meeting.startTime);
     const meetingEnd = new Date(meeting.endTime);
 
-    // Calculate position based on time
+    // calcul timp intial
     const startMinutes =
       meetingStart.getHours() * 60 + meetingStart.getMinutes();
     const endMinutes = meetingEnd.getHours() * 60 + meetingEnd.getMinutes();
     const duration = endMinutes - startMinutes;
 
-    // Calculate position from 8:00 AM (480 minutes)
+    // calcul procentaj pozitie intiala dupa timp
     const positionFromStart = startMinutes - 480; // 8:00 AM = 480 minutes
 
-    // Calculate percentage position and width
+    // calcul procentaj pozitie si latime
     const totalMinutes = 600; // 8:00 AM to 6:00 PM = 10 hours = 600 minutes
     const left = (positionFromStart / totalMinutes ) * 100;
     const width = (duration / totalMinutes ) * 100;
