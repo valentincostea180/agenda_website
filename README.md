@@ -1,50 +1,32 @@
+# 🏢 Office Management System
 
-## 🎯 Key Components
+A web-based system for managing visitors, meeting rooms, and internal communication, designed for efficient office workflows.
 
-### AgendaSystem
-- Visitor registration form
-- Time-based status automation
-- Two-day filtered view
-- Click-to-remove functionality
+## 📌 Overview
 
-### RoomSchedule  
-- Visual timeline interface
-- Conflict prevention
-- Participant management
-- PDF report generation
+The application combines visitor tracking, room scheduling, and video integration into a single interface, connected to a backend API for data persistence.
 
-### Video Component
-- YouTube URL processing
-- Responsive iframe embedding
-- Modal-based URL input
+### ⚙️ Features
+Visitor registration and tracking
+Meeting room scheduling with conflict prevention
+Participant management for meetings
+YouTube video integration
+PDF report generation
+Responsive interface for multiple devices
 
-## 💡 Smart Features
+### 🧩 Components
+Agenda System → visitor management and status tracking
+Room Schedule → timeline-based meeting planning
+Video Component → embedded YouTube content
 
-- **Time Validation**: Prevents scheduling conflicts and invalid time ranges
-- **Auto-formatting**: Converts YouTube URLs to embedded format
-- **Responsive Design**: Works on tablets, desktops, and touch screens
-- **Error Handling**: User-friendly alerts for invalid inputs
-- **Data Persistence**: Integrated with backend API
+### ▶️ How to Run
+Install dependencies: npm install
+Start backend: node server.js
+Start frontend: npm start
+Open: http://localhost:3000
 
-## 🚀 Getting Started
-
-1. Clone the repository
-2. Install dependencies: `npm install`
-3. Start backend server: `node server.js`
-4. Start frontend: `npm start`
-5. Access at: `http://localhost:3000`
-
-## 🔧 API Endpoints
-
-- `GET/POST /api/visitors` - Visitor management
-- `GET/POST/DELETE /api/meeting-rooms` - Meeting operations  
-- `POST /api/meetings/:id/participants` - Participant handling
-
-## 📸 Use Cases
-
-- **Reception Areas**: Track incoming visitors
-- **Office Management**: Schedule meeting rooms efficiently
-- **Internal Communications**: Display company video updates
-- **Administrative Tools**: Generate meeting reports and participant lists
-
-Perfect for companies needing an integrated solution for visitor management, room scheduling, and internal communications in a single, user-friendly interface.
+### 🧠 Concepts Used
+Full-stack development (frontend + API)
+State management and dynamic UI
+REST API integration
+Input validation and error handling
